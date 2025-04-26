@@ -1,4 +1,4 @@
 ---
 is_packer: false
 step_ca_url: null
-step_ca_fingerprint: ""
+step_ra_acme_url: null
