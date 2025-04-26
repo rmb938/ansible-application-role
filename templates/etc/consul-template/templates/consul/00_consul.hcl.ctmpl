@@ -20,18 +20,18 @@ retry_join = [
   "hashi-consul-3.us-homelab1.hl.rmb938.me"
 ]
 
-bind_addr = "{% raw %}{{ `{{ GetInterfaceIP \"eth0\" }}` }}{% endraw %}"
-serf_lan  = "{% raw %}{{ `{{ GetInterfaceIP \"eth0\" }}` }}{% endraw %}"
+bind_addr = "{% raw %}{{ `{{ GetPrivateIP }}` }}{% endraw %}"
+serf_lan  = "{% raw %}{{ `{{ GetPrivateIP }}` }}{% endraw %}"
 
 # Hard coding this, no easy way to figure this out at deploy time
 serf_lan_allowed_cidrs = ["192.168.23.0/24"]
 
-advertise_addr = "{% raw %}{{ `{{ GetInterfaceIP \"eth0\" }}` }}{% endraw %}"
+advertise_addr = "{% raw %}{{ `{{ GetPrivateIP }}` }}{% endraw %}"
 
 addresses {
   http     = "127.0.0.1"
   grpc     = "127.0.0.1"
-  grpc_tls = "{% raw %}{{ `{{ GetInterfaceIP \"eth0\" }}` }}{% endraw %}"
+  grpc_tls = "{% raw %}{{ `{{ GetPrivateIP }}` }}{% endraw %}"
 }
 
 ports {
