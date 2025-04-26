@@ -15,6 +15,7 @@
     mode: "0744"
     owner: root
     group: root
+    force: false
 
 # Start Cloud Init Scripts
 - name: Cloud Init Per Boot Scripts
