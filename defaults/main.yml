@@ -1,0 +1,4 @@
+---
+is_packer: false
+step_ca_url: null
+step_ca_fingerprint: ""
